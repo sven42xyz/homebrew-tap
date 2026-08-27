@@ -11,7 +11,7 @@ brew install gitls
 
 | Formula | Description | Upstream |
 |---|---|---|
-| `gitls` | A fast, minimal tool to inspect and act on multiple git repositories | [sven42xyz/gitools](https://github.com/sven42xyz/gitools) |
+| `gitls` | Fast, minimal tool to inspect and act on multiple git repositories | [sven42xyz/gitools](https://github.com/sven42xyz/gitools) |
 
 This tap ships **no bottles** — every formula is compiled from source on your
 machine. That keeps the tap maintenance-free, but it does mean a broken or
