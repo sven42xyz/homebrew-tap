@@ -1,0 +1,7 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Bug or feature request in gitls itself
+    url: https://github.com/sven42xyz/gitools/issues
+    about: >
+      This tap only carries packaging. Anything about how gitls behaves once
+      installed belongs in the gitools repository.

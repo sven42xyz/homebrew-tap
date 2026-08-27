@@ -1,0 +1,63 @@
+name: Build failure
+description: brew install / brew upgrade fails to compile a formula from this tap
+title: "[build] "
+labels: ["build-failure"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Formulae in this tap are built from source on your machine, so a build
+        failure usually depends on your local toolchain. The two outputs below
+        are what make a report diagnosable — please don't skip them.
+
+  - type: input
+    id: formula
+    attributes:
+      label: Formula
+      description: Which formula failed?
+      placeholder: gitls
+    validations:
+      required: true
+
+  - type: textarea
+    id: brew-config
+    attributes:
+      label: Output of `brew config`
+      description: >
+        Run `brew config` and paste the full output. This shows your CPU, macOS
+        version, Homebrew prefix and Xcode/CLT versions — the most common cause
+        of build failures is a mismatch between them.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: build-log
+    attributes:
+      label: Build log
+      description: >
+        The last ~30 lines of the log Homebrew points to, e.g.
+        `~/Library/Logs/Homebrew/<formula>/01.make.log`. Or run
+        `brew gist-logs <formula>` and paste the resulting link.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: brew-doctor
+    attributes:
+      label: Output of `brew doctor`
+      description: Optional, but it often names the problem outright.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: >
+        Did an earlier version install successfully on this machine? Did
+        anything change since (new Mac, migration, Xcode update, Rosetta)?
+    validations:
+      required: false
